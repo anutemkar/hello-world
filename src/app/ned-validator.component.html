@@ -1,0 +1,66 @@
+<div class="mdl-grid">
+
+    <div class="mdl-cell mdl-cell--2-col"></div>
+    <div class="mdl-cell mdl-cell--8-col welcome-wrapper">
+        <mdl-card mdl-shadow="2">
+            <mdl-card-title>
+                <h2 mdl-card-title-text>NED Validation</h2>
+            </mdl-card-title>
+            <mdl-card-supporting-text>
+                <div class="mdl-grid applications">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <form action="#" class="form-horizontal form-bordered">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label class="nedLabel">Select NED</label>
+                                        <select class="form-control" [(ngModel)]="SelectedValidator" name="validators">
+                                            <option *ngFor="let validator of Validators" [ngValue]="validator">{{validator[1]}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="nedLabel">Commands</label>
+                                        <textarea placeholder="Enter comands here..." [(ngModel)]="Command" name="nedCommand" class="form-control" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 text-right">
+                                    <button md-button class="mdl-button mdl-js-button mdl-button--colored" (click)="onExecute()">Run&nbsp;&nbsp;
+                                        <i class="fa fa-play"></i>
+                                    </button>
+                                    <!-- <button (click)="onExecute()" class="btn btn-success">
+                                                <strong>Run</strong>&nbsp;&nbsp;
+                                                <i class="fa fa-play"></i>
+                                            </button> -->
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <div class="terminal">
+                                            <p>{{CommandResult}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 text-right">
+                                    <button md-button class="mdl-button mdl-js-button mdl-button--colored" (click)="onExport()">Export</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </mdl-card-supporting-text>
+        </mdl-card>
+      
+        <!-- /.panel -->
+        <!--/ End input fields - horizontal form -->
+
+    </div>
+    <!-- /.col-md-6 -->
+
+    <!-- /.row -->
+</div>
