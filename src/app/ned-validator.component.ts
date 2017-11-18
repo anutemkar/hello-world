@@ -19,7 +19,7 @@ export class NedValidatorComponent implements OnInit {
     ngOnInit() {
         this.login()
 
-        this.CommandResult = "command output generate here";
+        this.CommandResult;
     }
 
     login() {
@@ -71,18 +71,18 @@ export class NedValidatorComponent implements OnInit {
     private getExportData() {
         let result = "Ned Validator Type" + ','
 
-        if(this.SelectedValidator instanceof Array && this.SelectedValidator.length < 2)
+        if (this.SelectedValidator instanceof Array && this.SelectedValidator.length < 2)
             result += JSON.stringify(this.SelectedValidator[1]);
-        
+
         result += ',' + '\r\n' + "Command" + ',';
 
-        if(this.Command) 
-            result += JSON.stringify(this.Command);
-        
+        if (this.Command)
+            result += this.replaceAll(JSON.stringify(this.Command), ',', ';');
+
         result += '\r\n' + "Result" + ',';
 
-        if(this.CommandResult && this.CommandResult != "command output generate here")
-            result += JSON.stringify(this.CommandResult);
+        if (this.CommandResult && this.CommandResult != "command output generate here")
+            result += this.replaceAll(this.CommandResult, ',', ';');
 
         result += '\r\n'
 
@@ -110,4 +110,12 @@ export class NedValidatorComponent implements OnInit {
             }
         }
     }
+
+    replaceAll(str, find, replace): string {
+        return str.replace(new RegExp(this.escapeRegExp(find), 'g'), replace);
+      }
+      
+    escapeRegExp(str):string {
+        return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+      }
 }

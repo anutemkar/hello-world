@@ -36,14 +36,13 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                       
+
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <div class="terminal">
-                                            <p>{{CommandResult}}</p>
-                                        </div>
+                                        <textarea placeholder="Comand Output..." [ngModel]="CommandResult" name="cmdResult" class="form-control no-gray terminal"
+                                            rows="5" readonly></textarea>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 text-right">
@@ -55,7 +54,7 @@
                 </div>
             </mdl-card-supporting-text>
         </mdl-card>
-      
+
         <!-- /.panel -->
         <!--/ End input fields - horizontal form -->
 

@@ -1,0 +1,131 @@
+
+.mdl-card {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.mdl-card:last-child {
+    margin: 30px 0 0;
+}
+
+.mdl-card__title {
+    border-bottom: 1px solid #ddd;
+    background: #f1f1f1 ;
+}
+
+.mdl-card__title-text {
+    font-weight: 400;
+}
+
+.mdl-card__supporting-text {
+    width: 100%;
+}
+
+.applications {
+    /* text-align: center; */
+}
+
+.applications i {
+    font-size: 100px;
+    display: block;
+}
+
+.applications h2 {
+    font-weight: 300;
+}
+
+.command-pair {
+    list-style: none;
+    padding: 0;
+}
+.command-pair li {
+    padding: 10px;
+    background-color: #e9eaed;
+    border: solid 1px #c7c7c7;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px 0px #c7c7c7;
+}
+.command-pair li .trash {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    background-color: #e9573f;
+    padding: 5px 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.command-pair li .fa.remove-rule {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e9573f;
+    color: #fff;
+    padding: 6px 5px;
+    cursor: pointer;
+}
+.rule-list-table .fa {
+    font-size: 15px;
+    color: #4888e1;
+    cursor: pointer;
+}
+.rule-list-table .remove {
+    color: #e9573f;
+    margin-right: 5px;
+}
+.rule-list {
+    padding: 0;
+    transition: all ease .3s;
+}
+.rule-list li {
+    background-color: #e6e6e6;
+    padding: 0;
+    position: relative;
+}
+.run-panel {
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+}
+.terminal {
+    height: 200px;
+    background-color: #2f2f2f;
+    padding: 10px
+}
+.terminal p {
+    font-family: monospace;
+    color: #1fe41f;
+    font-weight: 600;
+    font-size: 17px;
+}
+.jqstooltip {
+    position: absolute;
+    left: 0px;top: 0px;
+    visibility: hidden;
+    background: rgb(0, 0, 0) transparent;
+    background-color: rgba(0,0,0,0.6);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+    color: white;font: 10px arial, san serif;
+    text-align: left;
+    white-space: nowrap;
+    padding: 5px;
+    border: 1px solid white;
+    z-index: 10000;
+}
+.jqsfield {
+    color: white;
+    font: 10px arial, san serif;
+    text-align: left;
+}
+
+.nedLabel {
+    font-size: 16px;
+
+}
+
+.form-control[readonly].no-gray {
+    background-color:white;
+  }
